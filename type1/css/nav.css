@@ -1,0 +1,52 @@
+:root {
+    --font-color: #f0f0f0;
+    --font-family: 'Source Sans Pro', sans-serif;
+    --nav-color: #4738E2;
+    --nav-select-color: #F75857;
+    --title-size: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family);
+}
+
+ul {
+    display: flex;
+    list-style: none;
+}
+
+ul li {
+    padding: 8px 12px;
+}
+.navBar {
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navBar__title {
+    padding: 8px 12px;
+    font-size: var(--title-size);
+}
+.navBar__menu li{
+    padding: 8px 24px;
+}
+
+.navBar__auth {
+    
+}
+
+.navBar__auth li{
+    padding: 8px 12px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.auth {
+    display: none;
+}
