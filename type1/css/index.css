@@ -4,6 +4,7 @@
     --nav-color: #4738E2;
     --nav-select-color: #F75857;
     --title-size: 20px;
+    --content-color: gray;
 }
 
 body {
@@ -34,10 +35,6 @@ ul li {
     padding: 8px 24px;
 }
 
-.navBar__auth {
-    
-}
-
 .navBar__auth li{
     padding: 8px 12px;
 }
@@ -49,4 +46,40 @@ a {
 
 .auth {
     display: none;
+}
+.card {
+    border:1px solid rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px rgba(25,25,25,0.2);
+    border-radius: 6px 6px 3px 3px;
+    cursor: pointer;
+    width: 202px;
+    position: relative;
+    color :var(--content-color);
+    margin: 8px;
+}
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cardList {
+    padding: 8px 12px;
+    margin-top: 45px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+
+.cardList li{
+    padding: 0px;
+}
+
+.card___caption{
+    padding: 7px 10px 0px 10px;
+}
+
+.card__icons {
+    border-top: 1px #f2f2f2 solid;
+    padding: 7px 0px;
+    font-size: 14px;
 }
