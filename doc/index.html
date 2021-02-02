@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="menu">
+            <button class="menu__about">About</button>
+            <button class="menu__projects">Projects</button>
+            <button class="menu__login">Login</button>
+        </div>
+    </nav>
+    <header>
+        <div class="header-content">
+            <h1 class="header-title">J2KB</h1>
+        </div>
+    </header>
+    <div class="container">
+        <h2>프로젝트 등록</h2>
+        <label for="title">제목</label>
+        <input type="text" name="title">
+        <br>
+        <label for="title">팀명</label>
+        <input type="text" name="title">
+        <br>
+        <label for="thumbnail">대표 이미지</label>
+        <input type="file" name="thumbnail">
+        <div id="summernote"></div>
+        <button id="save">save</button>
+    </div>
+   <footer>
+        <div>contact</div>
+    </footer>
+    <script src="./main.js"></script>
+    <script>
+        $('#summernote').summernote({
+          placeholder: '내용을 입력해 주세요.',
+          tabsize: 2,
+          height: 500,
+          toolbar: [
+            ['style', ['style']],
+            ['font', ['bold', 'underline', 'clear']],
+            ['color', ['color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['table', ['table']],
+            ['insert', ['link', 'picture', 'video']],
+            ['view', ['fullscreen', 'codeview', 'help']]
+          ]
+        });
+        const saveButton = document.querySelector("#save")
+        saveButton.addEventListener("click", () => {
+            console.log($('#summernote').summernote('code'))
+        })
+      </script>
+</body>
+</html>
