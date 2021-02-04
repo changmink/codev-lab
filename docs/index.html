@@ -25,13 +25,13 @@
     <div class="container">
         <h2>프로젝트 등록</h2>
         <label for="title">제목</label>
-        <input type="text" name="title">
+        <input type="text" name="title" id="title">
         <br>
-        <label for="title">팀명</label>
-        <input type="text" name="title">
+        <label for="team">팀명</label>
+        <input type="text" name="team" id="team">
         <br>
         <label for="thumbnail">대표 이미지</label>
-        <input type="file" name="thumbnail">
+        <input type="file" name="thumbnail" id="thumbnail">
         <div id="summernote"></div>
         <button id="save">save</button>
     </div>
@@ -56,7 +56,12 @@
         });
         const saveButton = document.querySelector("#save")
         saveButton.addEventListener("click", () => {
-            console.log($('#summernote').summernote('code'))
+            const content = {}
+            content.main = $('#summernote').summernote('code')
+            content.title = document.querySelector("#title").value
+            content.team = document.querySelector("#team").value
+            content.thumbnail = document.querySelector("#thumbnail").files[0]
+            console.log(content)
         })
       </script>
 </body>
