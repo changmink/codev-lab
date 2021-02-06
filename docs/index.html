@@ -16,6 +16,7 @@
             <button class="menu__projects">Projects</button>
             <button class="menu__login">Login</button>
         </div>
+        <div id="login" style="display: none;">none</div>
     </nav>
     <header>
         <div class="header-content">
@@ -23,8 +24,6 @@
         </div>
     </header>
     <div class="container">
-        <div id="username"></div>
-        <div id="password"></div>
         <h2>프로젝트 등록</h2>
         <label for="title">제목</label>
         <input type="text" name="title" id="title">
@@ -41,30 +40,5 @@
         <div>contact</div>
     </footer>
     <script src="./main.js"></script>
-    <script>
-        $('#summernote').summernote({
-          placeholder: '내용을 입력해 주세요.',
-          tabsize: 2,
-          height: 500,
-          toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['table', ['table']],
-            ['insert', ['link', 'picture', 'video']],
-            ['view', ['fullscreen', 'codeview', 'help']]
-          ]
-        });
-        const saveButton = document.querySelector("#save")
-        saveButton.addEventListener("click", () => {
-            const content = {}
-            content.main = $('#summernote').summernote('code')
-            content.title = document.querySelector("#title").value
-            content.team = document.querySelector("#team").value
-            content.thumbnail = document.querySelector("#thumbnail").files[0]
-            console.log(content)
-        })
-      </script>
 </body>
 </html>
